@@ -7,7 +7,7 @@ from mq9 import MQ
 BME = BME(decimal=5)
 MQ = MQ()
 
-#!!!!!!!!!!!!! TO BE DELETED !!!!!!!!!!!!!!!!
+#debug
 iteration = 0
 
 if __name__ == '__main__':
@@ -19,8 +19,6 @@ if __name__ == '__main__':
         print(f'Humidity: {BME.hum()}')
         print(f'Pressure: {BME.pres()}')
         print(f'Altitude: {BME.alt()}')
-        
-        print('\n')
         
         print(f'Value: {MQ.value()}')
         print(f'Voltage: {MQ.voltage()}')
