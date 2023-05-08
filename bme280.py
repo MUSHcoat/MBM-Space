@@ -5,8 +5,10 @@ from adafruit_bme280 import basic as adafruit_bme280
 class BME:
     def __init__(self, decimal):
         self.decimal = decimal
-        self.i2c_dev = busio.I2C(board.SCL, board.SDA)
-        self.bme280 = adafruit_bme280.Adafruit_BME280_I2C(self.i2c_dev)
+        i2c = busio.I2C(board.SCL, board.SDA)
+
+        self.i2c = i2c
+        self.bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
         
     def set_decimal(self, decimal):
         self.decimal = decimal
